@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAMEHUB — Your Game. Your Community. Your Arena.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo"><span class="logo-pad">🎮</span> GAME<span class="grad">HUB</span></a>
+    <nav class="nav-links">
+      <a href="#trending">Trending</a>
+      <a href="#leaderboard">Leaderboards</a>
+      <a href="#events">Events</a>
+      <a href="#community">Community</a>
+      <a href="#library">Library</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-ghost" id="signInBtn">Sign In</button>
+      <button class="btn btn-primary btn-sm" id="joinBtn">Join Community</button>
+    </div>
+  </header>
+
+  <!-- 1. HERO -->
+  <section class="hero" id="home">
+    <video autoplay muted playsinline preload="auto" src="public/Bunny.mp4?v=4"></video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">🕹️ THE NEXT-GEN GAMING COMMUNITY</span>
+      <h1 class="hero-title">ENTER THE<br><span class="grad">ARENA</span></h1>
+      <p class="hero-sub">Your Game. Your Community. Your Arena.</p>
+      <div class="hero-cta">
+        <a href="#trending" class="btn btn-primary btn-lg">Explore Games</a>
+        <a href="#community" class="btn btn-outline btn-lg">Join Community</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-count="500">0</span><span class="stat-label">Games</span></div>
+        <div class="stat"><span class="stat-num" data-count="4800">0</span><span class="stat-label">Players Online</span></div>
+        <div class="stat"><span class="stat-num" data-count="320">0</span><span class="stat-label">Daily Tournaments</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRENDING GAMES -->
+  <section class="section" id="trending">
+    <div class="section-head">
+      <span class="section-eyebrow">🔥 HOT RIGHT NOW</span>
+      <h2 class="section-title">Trending <span class="grad">Games</span></h2>
+      <p class="section-sub">The most played titles across GAMEHUB this week.</p>
+    </div>
+    <div class="games-grid" id="trendingGrid"></div>
+  </section>
+
+  <!-- 3. LEADERBOARDS -->
+  <section class="section section-alt" id="leaderboard">
+    <div class="section-head">
+      <span class="section-eyebrow">🏆 CLIMB THE RANKS</span>
+      <h2 class="section-title">Global <span class="grad">Leaderboard</span></h2>
+      <p class="section-sub">Live rankings. Moves happen in real time.</p>
+    </div>
+    <div class="leaderboard-wrap">
+      <div class="leaderboard-card">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Game</th>
+              <th>XP</th>
+              <th>Wins</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody"></tbody>
+        </table>
+      </div>
+      <div class="podium" id="podium">
+        <h3 class="podium-title">🏆 Top 3 Podium</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. UPCOMING EVENTS -->
+  <section class="section" id="events">
+    <div class="section-head">
+      <span class="section-eyebrow">⚔️ MARK YOUR CALENDAR</span>
+      <h2 class="section-title">Upcoming <span class="grad">Events</span></h2>
+      <p class="section-sub">Compete, win prizes, and earn your glory.</p>
+    </div>
+    <div class="events-grid" id="eventsGrid"></div>
+  </section>
+
+  <!-- 6. COMMUNITY -->
+  <section class="section section-alt" id="community">
+    <div class="section-head">
+      <span class="section-eyebrow">📰 THE PULSE</span>
+      <h2 class="section-title">Gaming <span class="grad">Community</span></h2>
+      <p class="section-sub">Discussions, news, polls, guides — straight from the arena.</p>
+    </div>
+    <div class="community-grid">
+      <div class="community-feeds">
+        <article class="post-card">
+          <div class="post-head">
+            <span class="avatar">PX</span>
+            <div><strong>PhantomX</strong><span class="post-time">2h ago</span></div>
+            <span class="tag tag-hot">Discussion</span>
+          </div>
+          <p class="post-text">Valorant 9.0 patch is insane — the new map rotation finally rewards aggressive play. What do you all think?</p>
+          <div class="post-actions">
+            <button class="vote-btn" data-vote="likes">👍 248</button>
+            <button class="vote-btn" data-vote="comments">💬 56</button>
+            <button class="vote-btn" data-vote="shares">↗️ 12</button>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-head">
+            <span class="avatar">NV</span>
+            <div><strong>Nova</strong><span class="post-time">5h ago</span></div>
+            <span class="tag tag-news">News</span>
+          </div>
+          <p class="post-text">GAMEHUB Championship announced — ₹10,000 prize pool, sign-ups open now. Don't sleep on this one.</p>
+          <div class="post-actions">
+            <button class="vote-btn" data-vote="likes">👍 412</button>
+            <button class="vote-btn" data-vote="comments">💬 89</button>
+            <button class="vote-btn" data-vote="shares">↗️ 34</button>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-head">
+            <span class="avatar">SH</span>
+            <div><strong>Shadow</strong><span class="post-time">1d ago</span></div>
+            <span class="tag tag-guide">Guide</span>
+          </div>
+          <p class="post-text">Guide: The perfect CS2 crosshair setup for 2026. Sensitivity, color, and why you should stop changing it every match.</p>
+          <div class="post-actions">
+            <button class="vote-btn" data-vote="likes">👍 196</button>
+            <button class="vote-btn" data-vote="comments">💬 31</button>
+            <button class="vote-btn" data-vote="shares">↗️ 18</button>
+          </div>
+        </article>
+      </div>
+
+      <aside class="community-side">
+        <div class="poll-card">
+          <h3 class="poll-title">📊 What's your main game this season?</h3>
+          <div class="poll-options" id="pollOptions"></div>
+          <p class="poll-meta" id="pollMeta">0 votes • Poll ends in 3 days</p>
+        </div>
+
+        <div class="discord-card">
+          <h3>🎧 Join our Discord</h3>
+          <p>18,000+ members. LFG lobbies, scrims, and drop announcements.</p>
+          <button class="btn btn-primary btn-full" id="discordBtn">Join Discord Server</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 7. GAME LIBRARY -->
+  <section class="section" id="library">
+    <div class="section-head">
+      <span class="section-eyebrow">🗂️ EXPLORE EVERYTHING</span>
+      <h2 class="section-title">Game <span class="grad">Library</span></h2>
+      <p class="section-sub">Search and filter across the full GAMEHUB catalog.</p>
+    </div>
+    <div class="library-toolbar">
+      <div class="search-box">
+        <input type="search" id="searchInput" placeholder="Search games..." autocomplete="off">
+        <span class="search-icon">🔍</span>
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active" data-genre="All">All</button>
+        <button class="chip" data-genre="FPS">FPS</button>
+        <button class="chip" data-genre="RPG">RPG</button>
+        <button class="chip" data-genre="Racing">Racing</button>
+        <button class="chip" data-genre="Strategy">Strategy</button>
+        <button class="chip" data-genre="Battle Royale">Battle Royale</button>
+      </div>
+    </div>
+    <div class="library-grid" id="libraryGrid"></div>
+    <p class="library-empty" id="libraryEmpty" hidden>No games match your search. 🎯</p>
+  </section>
+
+  <!-- 8. PLAYER DASHBOARD -->
+  <section class="section section-alt" id="dashboard">
+    <div class="section-head">
+      <span class="section-eyebrow">👤 YOUR COMMAND CENTER</span>
+      <h2 class="section-title">Player <span class="grad">Dashboard</span></h2>
+      <p class="section-sub">Everything about your career, at a glance.</p>
+    </div>
+    <div class="dashboard-grid">
+      <div class="dash-card dash-level">
+        <div class="dash-level-top">
+          <span class="dash-level-badge">LEVEL 42</span>
+          <span class="dash-level-xp">82,450 / 100,000 XP</span>
+        </div>
+        <div class="progress"><div class="progress-bar" style="width: 82%"></div></div>
+        <p class="progress-label">82% to Level 43</p>
+        <div class="dash-mini-stats">
+          <div><strong>128</strong><span>Games Played</span></div>
+          <div><strong>76</strong><span>Wins</span></div>
+          <div><strong>64%</strong><span>Win Rate</span></div>
+          <div><strong>9</strong><span>Achievements</span></div>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <h3 class="dash-title">⚔️ Recent Matches</h3>
+        <ul class="match-list" id="matchList"></ul>
+      </div>
+
+      <div class="dash-card">
+        <h3 class="dash-title">🛡️ Achievements</h3>
+        <ul class="dash-ach-list" id="dashAchList"></ul>
+        <a href="#achievements" class="btn btn-ghost btn-sm btn-full">View All</a>
+      </div>
+
+      <div class="dash-card">
+        <h3 class="dash-title">👥 Friends Online</h3>
+        <ul class="friend-list" id="friendList"></ul>
+      </div>
+
+      <div class="dash-card">
+        <h3 class="dash-title">🔔 Notifications</h3>
+        <ul class="notif-list" id="notifList"></ul>
+      </div>
+
+      <div class="dash-card dash-live">
+        <h3 class="dash-title">📈 Win Rate Trend</h3>
+        <div class="bars" id="winBars"></div>
+        <p class="trend-summary" id="winTrendSummary"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="section-head">
+      <span class="section-eyebrow">🏅 COLLECT THEM ALL</span>
+      <h2 class="section-title">Achievement <span class="grad">Wall</span></h2>
+      <p class="section-sub">Click any achievement to unlock it. Some may be... bugged.</p>
+    </div>
+    <div class="ach-grid" id="achGrid"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">🎮 GAME<span class="grad">HUB</span></div>
+    <p>Your Game. Your Community. Your Arena.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#trending">Trending</a>
+      <a href="#leaderboard">Leaderboards</a>
+      <a href="#events">Events</a>
+      <a href="#community">Community</a>
+      <a href="#library">Library</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#achievements">Achievements</a>
+    </div>
+  </footer>
+
+  <!-- PLAYER PROFILE MODAL -->
+  <div class="modal-backdrop" id="profileModal">
+    <div class="modal" id="modalBox">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"><span id="toastText"></span></div>
+
+  <script src="script.js?v=10"></script>
+</body>
+</html>

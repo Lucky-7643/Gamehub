@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html, body { margin: 0; padding: 0; background: #000; }
+  video { width: 1920px; height: 1080px; object-fit: contain; display: block; }
+</style>
+</head>
+<body>
+<video id="v" muted playsinline preload="auto" src="Bunny.mp4"></video>
+<script>
+  const v = document.getElementById('v');
+  v.addEventListener('loadedmetadata', () => { v.currentTime = Math.max(0, v.duration - 0.05); });
+  v.addEventListener('seeked', () => { v.pause(); });
+</script>
+</body>
+</html>
